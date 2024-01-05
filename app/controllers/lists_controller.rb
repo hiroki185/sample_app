@@ -11,7 +11,8 @@ class ListsController < ApplicationController
    redirect_to '/top'
  end
 
-  def index
+  def index #一覧画面
+
   end
 
   def show
@@ -19,9 +20,9 @@ class ListsController < ApplicationController
 
   def edit
   end
-  
+
   private
-  
+
   def list_params
     params.require(:list).permit(:title, :body)
   end
