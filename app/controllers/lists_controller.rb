@@ -3,7 +3,7 @@ class ListsController < ApplicationController
    @list = List.new
   end
 
- def create
+ def create #投稿フォーム
    list = List.new(list_params)
 
    list.save
