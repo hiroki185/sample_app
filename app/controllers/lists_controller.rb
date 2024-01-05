@@ -5,6 +5,8 @@ class ListsController < ApplicationController
 
  def create #投稿フォーム
 
+   list = List.new(list_params)
+
    list.save
 
    redirect_to list_path(list.id)
@@ -31,7 +33,7 @@ class ListsController < ApplicationController
   private
 
   def list_params
-    params.require(:list).permit(:title, :body)
+    params.require(:list).permit(:title, :body, :image)
   end
 
 end
