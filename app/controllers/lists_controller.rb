@@ -12,7 +12,7 @@ class ListsController < ApplicationController
  end
 
   def index #一覧画面
-
+    @lists = List.all
   end
 
   def show
