@@ -3,12 +3,26 @@
 <% @lists.each do |list| %>
 
 <div class="list-box">
-  
+
   <% if list.image.attached? %>
-  
-  <%= image_tag list.image, size: "200x200" %>
-  
-  
+
+   <%= image_tag list.image, size: "200x200" %>
+
+  <% else %>
+
+   <%= image_tag 'no_image (1)', size: "200x200" %>
+
+  <% end %>
+
+  <div class="list-comment">
+
+    <spon class="list-body"><%= list.body %></spon>
+
+     <spon class="list-title"><%= link_to list.title, list_path(list.id) %></spon>
+  </div>
+
+
+
 </div>
 
 <% end %>
