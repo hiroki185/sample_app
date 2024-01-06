@@ -11,9 +11,9 @@ class ListsController < ApplicationController
 
    redirect_to list_path(@list.id)
  else
-   render :new
+   render :index
  end
- 
+
  end
 
   def index #一覧画面
